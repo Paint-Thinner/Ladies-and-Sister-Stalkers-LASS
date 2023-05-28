@@ -1,0 +1,269 @@
+### TIER 0 ###
+
+<specific_character id="pnt_sim_default_stalker_0_default_0" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_0.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman\</snd_config>
+	<visual>actors\npc_stalker\rookie_fem_1</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_0_default_1" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_0.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman\</snd_config>
+	<visual>actors\npc_stalker\rookie_fem_2</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_0_default_2" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_0.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman\</snd_config>
+	<visual>actors\npc_stalker\rookie_fem_3</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_0_default_3" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_0.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman\</snd_config>
+	<visual>actors\npc_stalker\rookie_fem_4</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_0_default_4" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_0.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman\</snd_config>
+	<visual>actors\npc_stalker\rookie_fem_5</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_0_default_5" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_0.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman_1\</snd_config>
+	<visual>actors\npc_stalker\rookie_fem_6</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_0_default_6" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_0.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman_1\</snd_config>
+	<visual>actors\npc_stalker\rookie_fem_7</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_0_default_7" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_0.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman\</snd_config>
+	<visual>actors\npc_stalker\rookie_fem_8</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_0_default_8" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_0.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman\</snd_config>
+	<visual>actors\npc_stalker\rookie_fem_9</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_0_default_9" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_0.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman\</snd_config>
+	<visual>actors\npc_stalker\stalker_nebo_fem_1</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_0_default_10" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_0.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman\</snd_config>
+	<visual>actors\npc_stalker\stalker_nebo_fem_2</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_0_default_12" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_0.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman\</snd_config>
+	<visual>actors\npc_stalker\stalker_nebo_fem_3</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_0_default_13" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_0.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman\</snd_config>
+	<visual>actors\npc_stalker\stalker_nebo_fem_4</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_0_default_14" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_0.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman\</snd_config>
+	<visual>actors\npc_stalker\stalker_nebo_fem_5</visual>
+</specific_character>
+
+### TIER 1 ###
+
+<specific_character id="pnt_sim_default_stalker_1_default_0" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_1.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman_1\</snd_config>
+	<visual>actors\npc_stalker\seva_fem_1</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_1_default_1" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_1.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman\</snd_config>
+	<visual>actors\npc_stalker\lightcombatsuit_fem_1</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_1_default_2" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_1.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman_1\</snd_config>
+	<visual>actors\npc_stalker\sunrise_fem_1</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_1_default_3" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_1.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman_1\</snd_config>
+	<visual>actors\npc_stalker\sunrise_fem_2</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_1_default_4" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_1.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman\</snd_config>
+	<visual>actors\npc_stalker\sunrise_fem_3</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_1_default_5" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_1.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman\</snd_config>
+	<visual>actors\npc_stalker\sunrise_fem_4</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_1_default_6" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_1.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman\</snd_config>
+	<visual>actors\npc_stalker\sunrise_fem_5</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_1_default_7" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_1.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman\</snd_config>
+	<visual>actors\npc_stalker\sunrise_fem_6</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_1_default_8" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_1.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman_1\</snd_config>
+	<visual>actors\npc_stalker\lightcombatsuit_fem_2</visual>
+</specific_character>
+
+### TIER 2 ###
+
+<specific_character id="pnt_sim_default_stalker_2_default_1" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_2.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman_1\</snd_config>
+	<visual>actors\npc_stalker\seva_fem_1</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_2_default_2" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_2.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman\</snd_config>
+	<visual>actors\npc_stalker\lightcombatsuit_fem_1</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_2_default_3" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_2.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman_1\</snd_config>
+	<visual>actors\npc_stalker\sunrise_fem_1</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_2_default_4" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_2.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman_1\</snd_config>
+	<visual>actors\npc_stalker\sunrise_fem_2</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_2_default_5" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_2.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman\</snd_config>
+	<visual>actors\npc_stalker\sunrise_fem_3</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_2_default_6" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_2.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman\</snd_config>
+	<visual>actors\npc_stalker\sunrise_fem_4</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_2_default_7" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_2.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman\</snd_config>
+	<visual>actors\npc_stalker\sunrise_fem_5</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_2_default_8" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_2.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman\</snd_config>
+	<visual>actors\npc_stalker\sunrise_fem_6</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_2_default_9" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_2.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman_1\</snd_config>
+	<visual>actors\npc_stalker\hauler_fem_1</visual>
+</specific_character>
+
+<specific_character id="pnt_sim_default_stalker_2_default_10" team_default = "1">
+	<name>GENERATE_NAME_woman</name>
+#include "gameplay\profiles\character_desc_stalker_2.xml"
+	<icon>ui_inGame3_ico_stalker</icon>
+	<snd_config>characters_voice\human\woman_1\</snd_config>
+	<visual>actors\npc_stalker\lightcombatsuit_fem_2</visual>
+</specific_character>
