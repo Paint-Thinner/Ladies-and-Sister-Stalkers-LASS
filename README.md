@@ -7,11 +7,7 @@ LASS is a project I've been working on and off for about a total of a months wor
 This mod works best with Warnymph https://www.moddb.com/mods/stalker-anomaly/addons/war-nymph
 Simply download the Sister.of.the.Zone.7z from the github release https://github.com/Paint-Thinner/Ladies-and-Sister-Stalkers-LASS/releases and install it by dragging it into MO2 at the bottom of the load order, see image below for compatibility with WarNymph
 
-Load order should look like:
-WarNymph
-Ladies and Sister Stalker
-
-Unlike otherwise, if you use WarNymph with the patch you need to keep THAPS enabled
+Unlike otherwise, if you use WarNymph with the patch you need to have THAPS
 If you find any bugs, with models etc...yell at me
 --- --- ---
 CREDITS For the great voice acting provided by Tetiana Voloshyna found at Voice123.com for the player.
