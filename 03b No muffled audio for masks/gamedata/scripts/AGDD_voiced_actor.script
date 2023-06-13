@@ -48,7 +48,7 @@ Now actor will have voice lines related to thirstiness and hunger (associated wi
 
 An option, defined just below, will play muffled sounds. If such sounds are not available, replace 
 
-muffle = ""
+muffle = "m_"
 
 by
 

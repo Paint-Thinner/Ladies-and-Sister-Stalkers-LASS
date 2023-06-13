@@ -18,6 +18,7 @@ end
 
 local wct = weapon_cover_tilt
 local dte = demonized_time_events
+
 local actor_sounds = {
 	"gunslinger_controller\\actor\\sanity_1",
 	"gunslinger_controller\\actor\\sanity_2",
@@ -29,7 +30,6 @@ local actor_sounds = {
 	"gunslinger_controller\\actor\\sanity_8",
 	"gunslinger_controller\\actor\\sanity_9",
 }
-
 local actor_sound
 local psy_sounds = {
 	"gunslinger_controller\\actor\\psy_1"
