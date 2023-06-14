@@ -312,7 +312,7 @@ function actor_on_update(binder,delta) --thinker function, handles conditional s
 		--they are checked one by one and the next state sound will attempt to play only if conditions for the previous one weren't met
 		
 		if db.actor.health < 0.25 and hurt_volume > 0 then --critically hurt state sound has the highest priority and will always play over any other state sound
-			actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "hurt_bad_" .. math.random(25),2.1,hurt_pause,100,false,false,false,true) --plays the critically wounded sound
+			actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "hurt_bad_" .. math.random(15),2.1,hurt_pause,100,false,false,false,true) --plays the critically wounded sound
 		
 		elseif arszi_psy.get_psy_health() < 0.4 and psy_volume > 0 then --new citically psy-hurt sound 
 			actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "sanity_" .. math.random(9),psy_volume,sanity_pause,2000,false,false,false,true)	
