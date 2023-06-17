@@ -333,7 +333,7 @@ function actor_on_update(binder,delta) --thinker function, handles conditional s
 			actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "hunger_" .. math.random(3),1.0,satiety_pause,100,false,false,false,true) -- new satiety sound call, adjust filename and corresponding math factor
 		
 		elseif actor_status_sleep.get_sleep_deprivation(true) > 0 and sleep_volume > 0 then
-			actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "tired_" .. math.random(3),1.3,sleep_pause,100,false,false,false,true)
+			actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "tired_" .. math.random(7),1.3,sleep_pause,100,false,false,false,true)
 		
 		end
 	end
@@ -410,9 +410,12 @@ function actor_on_weapon_reload(wpn,ammo_total) --calls out reloads
 
 	already_commented_this_jam = false --clear the marker, actor is fixing the jam
 
-	if is_actor_in_squad() == true then --only plays reload shouts if actor is in combat and has a squad, call the speaker function with slightly different values
-		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "reloading_" .. math.random(12),3.0,2000,100,true,false,false,false)
-		add_action_intensity(30,3.0,125)
+	if is_actor_in_combat() == true and combat_intensity > combat_medium_threshold then
+		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "reloading_l2_" .. math.random(3),2.0,3000,80,false,false,false,false)
+		add_action_intensity(35,0.5,150)
+	elseif is_actor_in_combat() == true then
+		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "reloading_l1_" .. math.random(4),2.0,1500,90,true,false,false,false)
+		add_action_intensity(30,0.5,100)
 	end
 	
 end
