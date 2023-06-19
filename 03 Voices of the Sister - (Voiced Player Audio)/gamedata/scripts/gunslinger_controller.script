@@ -27,10 +27,6 @@ local helmet = (db.actor:item_in_slot(12))
 	"gunslinger_controller\\actor\\m_sanity_3",
 	"gunslinger_controller\\actor\\m_sanity_4",
 	"gunslinger_controller\\actor\\m_sanity_5",
-	"gunslinger_controller\\actor\\m_sanity_6",
-	"gunslinger_controller\\actor\\m_sanity_7",
-	"gunslinger_controller\\actor\\m_sanity_8",
-	"gunslinger_controller\\actor\\m_sanity_9",
 	}
 		else
 	local actor_sounds = {
@@ -39,10 +35,6 @@ local helmet = (db.actor:item_in_slot(12))
 	"gunslinger_controller\\actor\\sanity_3",
 	"gunslinger_controller\\actor\\sanity_4",
 	"gunslinger_controller\\actor\\sanity_5",
-	"gunslinger_controller\\actor\\sanity_6",
-	"gunslinger_controller\\actor\\sanity_7",
-	"gunslinger_controller\\actor\\sanity_8",
-	"gunslinger_controller\\actor\\sanity_9",
 	}
 end
 

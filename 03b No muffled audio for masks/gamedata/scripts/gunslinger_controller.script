@@ -25,10 +25,6 @@ local actor_sounds = {
 	"gunslinger_controller\\actor\\sanity_3",
 	"gunslinger_controller\\actor\\sanity_4",
 	"gunslinger_controller\\actor\\sanity_5",
-	"gunslinger_controller\\actor\\sanity_6",
-	"gunslinger_controller\\actor\\sanity_7",
-	"gunslinger_controller\\actor\\sanity_8",
-	"gunslinger_controller\\actor\\sanity_9",
 }
 local actor_sound
 local psy_sounds = {
