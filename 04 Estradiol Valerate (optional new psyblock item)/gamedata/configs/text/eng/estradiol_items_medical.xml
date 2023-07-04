@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="windows-1251"?>
+
+<string_table>
+	<string id="st_estradiol">
+		<text>Estradiol</text>
+	</string>
+	<string id="st_estradiol_descr">
+		<text>Estradiol valerate, a hormone medication, has shown potential in enhancing psychological resilience and providing protective effects against the traumatic experiences encountered in the Zone.\n \n \n
+		%c[ui_gray_3]PROPERTIES:\n
+		%c[d_blue] • %c[ui_gray_2] improves morale and psychological protection in the Zone\n
+		%c[d_red] • %c[ui_gray_2] causes dizziness\n
+		%c[d_cyan] • %c[ui_gray_2] may cause (un)wanted body shape changes\n
+		</text>
+	</string>
+</string_table>
