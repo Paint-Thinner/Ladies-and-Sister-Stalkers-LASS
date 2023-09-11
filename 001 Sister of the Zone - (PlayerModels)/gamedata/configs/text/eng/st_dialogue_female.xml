@@ -118,6 +118,88 @@
 	<string id="bandit_mechanic_st_0">
 		<text>Share your story, sister.</text>
 	</string>
+	<string id="simulation_task_78_about">
+		<text>Sis, you ever tried mutant meat? A lot of guys won't touch it unless they're starving, but personally I love it. You any good at hunting?</text>
+	</string>
+	<string id="simulation_task_78_fetch_finish">
+		<text>Yes! I'm going to eat good tonight! Thank you, sister. Here is your payment. Oh, and here: I have some ammo that doesn't fit my rifle. You can have it.</text>
+	</string>
+	<string id="simulation_task_1_fetch_finish">
+		<text>Great, sis! Thanks!</text>
+	</string>
+	<string id="simulation_task_2_fetch_finish">
+		<text>Awesome, sis. Thanks!</text>
+	</string>
+	<string id="simulation_task_3_fetch_finish">
+		<text>Great sis, thanks!</text>
+	</string>
+	<string id="simulation_task_4_fetch_finish">
+		<text>Great sis, thanks!</text>
+	</string>
+	<string id="simulation_task_5_fetch_about">
+		<text>My sister, I am very ill. Cleric has graciously offered to pray for me but I'm pretty sure I just need %ss. Please bring me some.</text>
+	</string>
+	<string id="simulation_task_5_fetch_finish">
+		<text>Thank you my sister. May the glory of the Monolith shine upon you.</text>
+	</string>
+	<string id="simulation_task_13_about">
+		<text>Hey, listen, sis. I know this is against regulations, but I'm going to be rotating home soon, and I want to bring back a souvenir. You think you can find an artefact for me?</text>
+	</string>
+	<string id="simulation_task_14_about">
+		<text>Sis, you ever tried mutant meat? A lot of guys won't touch it unless they're starving, but personally I love it. You any good at hunting?</text>
+	</string>
+	<string id="simulation_task_15_about">
+		<text>Sis, you ever tried mutant meat? A lot of guys won't touch it unless they're starving but personally I love it. You any good at hunting?</text>
+	</string>
+	<string id="simulation_task_17_about">
+		<text>Hey, sis, can you gather some Duty scum patches for me? That'll make me sleep easier.</text>
+	</string>
+	<string id="simulation_task_17_fetch_about">
+		<text>Hey, sis, can you gather some Duty scum patches for me? That'll make me sleep easier.</text>
+	</string>
+	<string id="simulation_task_17_fetch_finish">
+		<text>Maximum respect, sis! Hold on to this artefact.</text>
+	</string>
+	<string id="simulation_task_18_fetch_finish">
+		<text>Good job, sis. Here, take this artefact before someone sees us.</text>
+	</string>
+	<string id="simulation_task_19_about">
+		<text>Hello sister, want to kill some bastards? You give me their sweet little patches, and I'll give you an artefact. What do you say?</text>
+	</string>
+	<string id="simulation_task_19_fetch_about">
+		<text>Hello sister, want to kill some bastards? You give me their sweet little patches, and I'll give you an artefact. What do you say?</text>
+	</string>
+	<string id="simulation_task_19_fetch_finish">
+		<text>Thank you, sister, friend and helper. Here's your artefact.</text>
+	</string>
+	<string id="simulation_task_20_about">
+		<text>Hey, girl. I have some work for you. There's too many punks out there interfering with our business. Whack some of them and return their patches to me, will you?</text>
+	</string>
+	<string id="simulation_task_20_fetch_about">
+		<text>Hey, girl. I have some work for you. There's too many punks out there interfering with our business. Whack some of them and return their patches to me, will you? I need %ses.</text>
+	</string>
+	<string id="simulation_task_20_fetch_finish">
+		<text>Good job, sis. My respect and artefact to you.</text>
+	</string>
+	<string id="simulation_task_26_about">
+		<text>I could really use some help, sis. My friend was mugged and taken hostage by some bandits. I really don't know what I should do. Do you think you can help me out and save my friend?</text>
+	</string>
+	<string id="simulation_task_89_fetch_finish">
+		<text>Thank you, miss. This will help immensely in our research.</text>
+	</string>
+	<string id="simulation_task_92_fetch_finish">
+		<text>Thank you, miss. This will help immensely in our research.</text>
+	</string>
+	<string id="simulation_task_98_fetch_finish">
+		<text>Thank you, miss. This will help immensely in our research.</text>
+	</string>
+	<string id="simulation_task_99_fetch_finish">
+		<text>Thank you, miss. This will help immensely in our research.</text>
+	</string>
+	<string id="simulation_task_16_fetch_finish">
+		<text>Thank you, miss. This will help immensely in my research.</text>
+	</string>
+	
 	<string id="mechanic_monolith_jup_depo_start_0">
 		<text>Salutations, sister. My duty is to provide technical support for our brethren in the area.</text>
 	</string>
