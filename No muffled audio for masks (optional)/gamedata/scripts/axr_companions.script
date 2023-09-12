@@ -1780,7 +1780,12 @@ function UIWheelCompanion:PlayVoiceOver(cmd, state)
 	if (self.file_to_say and self.file_to_say:playing()) then
 		return
 	end
-
+	local helmet = (db.actor:item_in_slot(12))
+    if helmet then
+        muffle = "m_"
+    else
+        muffle = ""
+    end
 	if (cmd == "movement") then
 		if (state == 2) then
 			self:PlaySoundFile("characters_voice\\player\\command_holdposition_" .. math.random(4), 1.0)

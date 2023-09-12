@@ -48,7 +48,7 @@ Now actor will have voice lines related to thirstiness and hunger (associated wi
 
 An option, defined just below, will play muffled sounds. If such sounds are not available, replace 
 
-muffle = "m_"
+muffle = ""
 
 by
 
@@ -193,11 +193,11 @@ function monster_on_death_callback(victim,killer) --adds combat_intensity when a
 --	if (not db.actor:see(victim)) then return end --extra condition, makes sure that actor saw the npc die
 
 	if is_actor_in_combat() == true and combat_intensity > combat_high_threshold then --we're in the maxed out state of combat, play the according sound (something almost insane ideally)
-		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "kill_confirm_l3_" .. math.random(4),2.0,3500,50,false,false,false,false)
+		actor_speak("characters_voice\\player" .. lang .. "\\" .. "kill_confirm_l3_" .. math.random(4),2.0,3500,50,false,false,false,false)
 	elseif is_actor_in_combat() == true and combat_intensity > combat_medium_threshold then --second state, play the sound (cocky, dominant)
-		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "kill_confirm_l2_" .. math.random(12),2.0,2000,25,false,false,false,false)
+		actor_speak("characters_voice\\player" .. lang .. "\\" .. "kill_confirm_l2_" .. math.random(12),2.0,2000,25,false,false,false,false)
 	elseif is_actor_in_combat() == true then --first state (calm and informative, should also require the a squad)
-		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "kill_confirm_l1_" .. math.random(7),2.0,1500,25,false,false,false,false)
+		actor_speak("characters_voice\\player" .. lang .. "\\" .. "kill_confirm_l1_" .. math.random(7),2.0,1500,25,false,false,false,false)
 	end
 	
 	add_action_intensity(80,1.0,1000)
@@ -216,11 +216,11 @@ function npc_on_death_callback(victim,killer) --adds combat_intensity when a hum
 --	if (not db.actor:see(victim)) then return end
 
 	if is_actor_in_combat() == true and combat_intensity > combat_high_threshold then
-		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "kill_confirm_l3_" .. math.random(4),2.0,3500,75,false,false,false,false)
+		actor_speak("characters_voice\\player" .. lang .. "\\" .. "kill_confirm_l3_" .. math.random(4),2.0,3500,75,false,false,false,false)
 	elseif is_actor_in_combat() == true and combat_intensity > combat_medium_threshold then
-		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "kill_confirm_l2_" .. math.random(12),2.0,3000,75,false,false,false,false)
+		actor_speak("characters_voice\\player" .. lang .. "\\" .. "kill_confirm_l2_" .. math.random(12),2.0,3000,75,false,false,false,false)
 	elseif is_actor_in_combat() == true then
-		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "kill_confirm_l1_" .. math.random(7),2.0,1500,50,false,false,false,false)
+		actor_speak("characters_voice\\player" .. lang .. "\\" .. "kill_confirm_l1_" .. math.random(7),2.0,1500,50,false,false,false,false)
 	end
 	
 	add_action_intensity(100,1.0,1000)
@@ -312,28 +312,28 @@ function actor_on_update(binder,delta) --thinker function, handles conditional s
 		--they are checked one by one and the next state sound will attempt to play only if conditions for the previous one weren't met
 		
 		if db.actor.health < 0.25 and hurt_volume > 0 then --critically hurt state sound has the highest priority and will always play over any other state sound
-			actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "hurt_bad_" .. math.random(15),2.1,hurt_pause,100,false,false,false,true) --plays the critically wounded sound
+			actor_speak("characters_voice\\player" .. lang .. "\\" .. "hurt_bad_" .. math.random(15),2.1,hurt_pause,100,false,false,false,true) --plays the critically wounded sound
 		
 		elseif arszi_psy.get_psy_health() < 0.4 and psy_volume > 0 then --new citically psy-hurt sound 
-			actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "sanity_" .. math.random(9),psy_volume,sanity_pause,2000,false,false,false,true)	
+			actor_speak("characters_voice\\player" .. lang .. "\\" .. "sanity_" .. math.random(9),psy_volume,sanity_pause,2000,false,false,false,true)	
 		
 		elseif arszi_psy.get_psy_health() < 1.0 and psy_volume > 0 then --new psy-hurt sound (weak psy)
-			actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "fear_" .. math.random(7),psy_volume,fear_pause,100,false,false,false,true) --plays the psy wounded sound
+			actor_speak("characters_voice\\player" .. lang .. "\\" .. "fear_" .. math.random(7),psy_volume,fear_pause,100,false,false,false,true) --plays the psy wounded sound
 		
 		elseif db.actor.power < 0.20 and sprint_volume > 0 and hurt_volume < sprint_volume and hurt_pause > sprint_pause then --exhaustion state will only play if it has both longer pause and higher volume than the hurt sound
-			actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "exhausted_" .. math.random(7),sprint_volume,sprint_pause,100,false,false,false,true) --plays the exhausted sound
+			actor_speak("characters_voice\\player" .. lang .. "\\" .. "exhausted_" .. math.random(7),sprint_volume,sprint_pause,100,false,false,false,true) --plays the exhausted sound
 		
 		elseif db.actor.health < 0.55 and hurt_volume > 0 then --normal hurt state will play if everything else fails to meet the conditions
-			actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "hurt_" .. math.random(17),1.8,hurt_pause,100,false,false,false,true) --plays the wounded sound
+			actor_speak("characters_voice\\player" .. lang .. "\\" .. "hurt_" .. math.random(17),1.8,hurt_pause,100,false,false,false,true) --plays the wounded sound
 		
 		elseif actor_status_thirst.get_water_deprivation(true) > 0 and thirst_volume > 0 then 
-			actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "thirst_" .. math.random(7),1.0,thirst_pause,100,false,false,false,true)
+			actor_speak("characters_voice\\player" .. lang .. "\\" .. "thirst_" .. math.random(7),1.0,thirst_pause,100,false,false,false,true)
 		
 		elseif db.actor:cast_Actor():conditions():GetSatiety() < 0.6 and satiety_volume > 0 then 
-			actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "hunger_" .. math.random(3),1.0,satiety_pause,100,false,false,false,true) -- new satiety sound call, adjust filename and corresponding math factor
+			actor_speak("characters_voice\\player" .. lang .. "\\" .. "hunger_" .. math.random(3),1.0,satiety_pause,100,false,false,false,true) -- new satiety sound call, adjust filename and corresponding math factor
 		
 		elseif actor_status_sleep.get_sleep_deprivation(true) > 0 and sleep_volume > 0 then
-			actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "tired_" .. math.random(7),1.3,sleep_pause,100,false,false,false,true)
+			actor_speak("characters_voice\\player" .. lang .. "\\" .. "tired_" .. math.random(7),1.3,sleep_pause,100,false,false,false,true)
 		
 		end
 	end
@@ -356,18 +356,18 @@ function actor_on_before_hit(hitinfo,bone_id,flags) --damage function, plays pai
 		local anims = {"hit_front","hit_front_left","hit_front_right"} --a table of camera animations for hit punch
 		if (hitinfo.type == hit.burn or hitinfo.type == hit.light_burn or hitinfo.type == hit.chemical_burn) and (last_health - db.actor.health) >= 0.1 then --this checks for a specific threshold for "area" damage types
 			if db.actor.health > 0.5 then --checks if the actor is over 50% of their full health
-				actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "pain_" .. math.random(14),1.0,1000,100,false,true,true,false)
+				actor_speak("characters_voice\\player" .. lang .. "\\" .. "pain_" .. math.random(14),1.0,1000,100,false,true,true,false)
 			else
-				actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "pain_bad_" .. math.random(10),1.0,1000,100,false,true,true,false)
+				actor_speak("characters_voice\\player" .. lang .. "\\" .. "pain_bad_" .. math.random(10),1.0,1000,100,false,true,true,false)
 			end
 			level.add_cam_effector( "camera_effects\\" .. anims[math.random(#anims)] .. ".anm", math.random(447555, 447999), false, "" ) --if you use a generic camera punch effect, put it here
 			last_health = db.actor.health --saves player's health value for later use
 			hit_timer1 = time_global() + 1000 --sets the delay of one second before the next pain sound can be played if the damage type is usable as an area effect
 		elseif (hitinfo.type == hit.shock or hitinfo.type == hit.strike or hitinfo.type == hit.wound or hitinfo.type == hit.fire_wound or hitinfo.type == hit.explosion or hitinfo.type == hit.wound_2) then --this is for every other "non-area" damage type
 			if db.actor.health > 0.5 then 
-				actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "pain_" .. math.random(14),1.0,1000,100,false,true,true,false)
+				actor_speak("characters_voice\\player" .. lang .. "\\" .. "pain_" .. math.random(14),1.0,1000,100,false,true,true,false)
 			else
-				actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "pain_bad_" .. math.random(10),1.0,1000,100,false,true,true,false)
+				actor_speak("characters_voice\\player" .. lang .. "\\" .. "pain_bad_" .. math.random(10),1.0,1000,100,false,true,true,false)
 			end
 --			level.add_cam_effector( "camera_effects\\" .. anims[math.random(#anims)] .. ".anm", math.random(447555, 447999), false, "" ) --if you use a generic camera punch effect, put it here
 			hit_timer1 = time_global() + 125 --sets the delay of 1/8th of a second before the next pain sound can be played if the damage type is only used in hits
@@ -384,7 +384,7 @@ end
 
 function actor_on_before_death(whoID,flags) --death function, plays death sounds (DEATH SCREAMS AND WHELPS ONLY, NO BODY FALLING SOUNDS OR ANYTHING ELSE)
 
-	actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "death_" .. math.random(5),1.0,9999,100,false,true,true,false)
+	actor_speak("characters_voice\\player" .. lang .. "\\" .. "death_" .. math.random(5),1.0,9999,100,false,true,true,false)
 	
 end
 
@@ -397,10 +397,10 @@ function actor_on_weapon_jammed(wpn) --plays responses to weapon jams
 	already_commented_this_jam = true --marks that we already tried to respond to this jam
 
 	if is_actor_in_squad() == true then --if actor is in a squad, call the speaker function with slightly different values
-		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "gun_jam_" .. math.random(12),2,2000,100,true,false,false,false)
+		actor_speak("characters_voice\\player" .. lang .. "\\" .. "gun_jam_" .. math.random(12),2,2000,100,true,false,false,false)
 		add_action_intensity(30,0.5,125)
 	else
-		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "gun_jam_" .. math.random(12),2,2000,90,false,false,false,false)
+		actor_speak("characters_voice\\player" .. lang .. "\\" .. "gun_jam_" .. math.random(12),2,2000,90,false,false,false,false)
 		add_action_intensity(35,0.5,150)
 	end
 	
@@ -411,10 +411,10 @@ function actor_on_weapon_reload(wpn,ammo_total) --calls out reloads
 	already_commented_this_jam = false --clear the marker, actor is fixing the jam
 
 	if is_actor_in_combat() == true and combat_intensity > combat_medium_threshold then
-		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "reloading_l2_" .. math.random(3),2.0,3000,80,false,false,false,false)
+		actor_speak("characters_voice\\player" .. lang .. "\\" .. "reloading_l2_" .. math.random(3),2.0,3000,80,false,false,false,false)
 		add_action_intensity(35,0.5,150)
 	elseif is_actor_in_combat() == true then
-		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "reloading_l1_" .. math.random(4),2.0,1500,90,true,false,false,false)
+		actor_speak("characters_voice\\player" .. lang .. "\\" .. "reloading_l1_" .. math.random(4),2.0,1500,90,true,false,false,false)
 		add_action_intensity(30,0.5,100)
 	end
 	
@@ -440,7 +440,7 @@ function on_key_release(key) --grenade throw callout function
 		( string.find( actor_weapon_name, "grenade_rgd" ) or string.find( actor_weapon_name, "grenade_f" ) or string.find( actor_weapon_name, "grenade_gd" ) ) --the list of valid nades for the callouts (I'd do a table but I don't really know how they work in this engine and I'm not feeling like spending time on that)
 		then
 			next_throw_callout = time_global() + 5000 --sets the pause of five seconds before the next callout
-			actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "grenade_throw_" .. math.random(9),2.0,1250,100,true,false,false,false)
+			actor_speak("characters_voice\\player" .. lang .. "\\" .. "grenade_throw_" .. math.random(9),2.0,1250,100,true,false,false,false)
 			add_action_intensity(75,0.5,500)
 		end	
 --DEBUG--		SetHudMsg("Weapon Name: " .. actor_weapon_name .. ", Weapon State: " .. actor_weapon:get_state()) --displays what weapon is the actor using and at what state when LMB or RMB is released

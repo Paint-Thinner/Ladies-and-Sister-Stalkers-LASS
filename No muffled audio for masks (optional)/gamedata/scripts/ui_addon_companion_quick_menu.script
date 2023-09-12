@@ -1,6 +1,6 @@
 function on_game_start()
 	RegisterScriptCallback("on_key_press",on_key_press)
-end
+end  
 
 --local addonMenu=nil
 function on_key_press(key)
@@ -17,17 +17,18 @@ function on_key_press(key)
 --			addonMenu = addonCompanionsContextMenu(v)
 --			addonMenu:ShowDialog(false)
 		local faction = get_actor_true_community()
-		if faction == "isg" or faction == "killer" then
-			lang = "_eng"
+		local helmet = (db.actor:item_in_slot(12))
+		if helmet then
+			muffle = "m_"
 		else
-			lang = ""
+			muffle = ""
 		end
 		chance = math.random(0,100)
 		if chance > 50 then
-			AGDD_voiced_actor.actor_speak("characters_voice\\player" .. lang .. "\\command_start_" .. math.random(4),1.0,1000,100,true,false,false,false)
+			AGDD_voiced_actor.actor_speak("characters_voice\\player" .. lang .. "\\" .. "command_start_" .. math.random(4),1.0,1000,100,true,false,false,false)
 --			show_all_ui(false)
 			if AGDD_voiced_actor.is_actor_in_combat() ~= true then
-				AGDD_voiced_actor.actor_speak("characters_voice\\player" .. lang .. "\\command_cancel_" .. math.random(3),1.0,1000,100,true,false,false,false)
+				AGDD_voiced_actor.actor_speak("characters_voice\\player" .. lang .. "\\" .. "command_cancel_" .. math.random(3),1.0,1000,100,true,false,false,false)
 			end
 --				addonMenu:CloseTheMenu()
 --			end
@@ -90,8 +91,8 @@ function addonCompanionsContextMenu:Onbtn_move_wait()
 	self:ExecuteScriptByCondition("npcx_beh_wait",
 								axr_companions.set_companion_to_follow_state, 
 								axr_companions.set_companion_to_wait_state,
-								"characters_voice\\player\\command_follow_" .. math.random(3),
-								"characters_voice\\player\\command_holdposition_" .. math.random(3))
+								"characters_voice\\player\\" .. lang .. "\\" .. "command_follow_" .. math.random(3),
+								"characters_voice\\player\\" .. lang .. "\\" .. "command_holdposition_" .. math.random(3))
 
 --	addonMenu:CloseTheMenu()
 end 
@@ -100,8 +101,8 @@ function addonCompanionsContextMenu:Onbtn_stealth_stopStealth()
 	self:ExecuteScriptByCondition("npcx_beh_substate_stealth",
 								axr_companions.set_companion_to_default_substate, 
 								axr_companions.set_companion_to_stealth_substate,
-								"characters_voice\\player\\command_stealth_stop_" .. math.random(3),
-								"characters_voice\\player\\command_stealth_" .. math.random(3))
+								"characters_voice\\player\\" .. lang .. "\\" .. "command_stealth_stop_" .. math.random(3),
+								"characters_voice\\player\\" .. lang .. "\\" .. "command_stealth_" .. math.random(3))
 
 --	addonMenu:CloseTheMenu()
 end 
@@ -110,8 +111,8 @@ function addonCompanionsContextMenu:Onbtn_far_close()
 	self:ExecuteScriptByCondition("npcx_beh_distance_far",
 								axr_companions.switch_companion_distance, 
 								axr_companions.switch_companion_distance,
-								"characters_voice\\player\\command_follow_close_" .. math.random(3),
-								"characters_voice\\player\\command_follow_far_" .. math.random(3))
+								"characters_voice\\player\\" .. lang .. "\\" .. "command_follow_close_" .. math.random(3),
+								"characters_voice\\player\\" .. lang .. "\\" .. "command_follow_far_" .. math.random(3))
 
 --	addonMenu:CloseTheMenu()
 end 
@@ -120,8 +121,8 @@ function addonCompanionsContextMenu:Onbtn_aggressive_ignoreCombatButHelpActor()
 	self:ExecuteScriptByCondition("npcx_beh_ignore_combat",
 								axr_companions.set_companion_to_attack_state, 
 								axr_companions.set_companion_to_attack_only_actor_combat_enemy_state,
-								"characters_voice\\player\\command_fireatwill_" .. math.random(3),
-								"characters_voice\\player\\command_guard_" .. math.random(3))
+								"characters_voice\\player\\" .. lang .. "\\" .. "command_fireatwill_" .. math.random(3),
+								"characters_voice\\player\\" .. lang .. "\\" .. "command_guard_" .. math.random(3))
 
 --	addonMenu:CloseTheMenu()
 end 
@@ -130,8 +131,8 @@ function addonCompanionsContextMenu:Onbtn_ignoreCombat_ignoreCombatButHelpActor(
 	self:ExecuteScriptByCondition("npcx_beh_ignore_actor_enemies",
 								axr_companions.set_companion_to_attack_only_actor_combat_enemy_state, 
 								axr_companions.set_companion_to_ignore_combat_state,
-								"characters_voice\\player\\command_guard_" .. math.random(3),
-								"characters_voice\\player\\command_holdfire_" .. math.random(3))
+								"characters_voice\\player\\" .. lang .. "\\" .. "command_guard_" .. math.random(3),
+								"characters_voice\\player\\" .. lang .. "\\" .. "command_holdfire_" .. math.random(3))
 
 --	addonMenu:CloseTheMenu()
 end 
@@ -140,8 +141,8 @@ function addonCompanionsContextMenu:Onbtn_lootCorpses_ignoreCorpses()
 	self:ExecuteScriptByCondition("npcx_beh_loot_corpses",
 								axr_companions.switch_companion_loot_corpses, 
 								axr_companions.switch_companion_loot_corpses,
-								"characters_voice\\player\\command_loot_stop_1",
-								"characters_voice\\player\\command_loot_" .. math.random(3))
+								"characters_voice\\player\\" .. lang .. "\\" .. "command_loot_stop_1",
+								"characters_voice\\player\\" .. lang .. "\\" .. "command_loot_" .. math.random(3))
 
 --	addonMenu:CloseTheMenu()
 end 
