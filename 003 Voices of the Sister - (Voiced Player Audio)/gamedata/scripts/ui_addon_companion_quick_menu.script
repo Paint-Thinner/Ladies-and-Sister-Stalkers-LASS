@@ -96,8 +96,8 @@ function addonCompanionsContextMenu:Onbtn_move_wait()
 	self:ExecuteScriptByCondition("npcx_beh_wait",
 								axr_companions.set_companion_to_follow_state, 
 								axr_companions.set_companion_to_wait_state,
-								"characters_voice\\player\\" .. lang .. "\\" .. muffle .. "command_follow_" .. math.random(3),
-								"characters_voice\\player\\" .. lang .. "\\" .. muffle .. "command_holdposition_" .. math.random(3))
+								"characters_voice\\player" .. lang .. "\\" .. muffle .. "command_follow_" .. math.random(3),
+								"characters_voice\\player" .. lang .. "\\" .. muffle .. "command_holdposition_" .. math.random(3))
 
 --	addonMenu:CloseTheMenu()
 end 
@@ -106,8 +106,8 @@ function addonCompanionsContextMenu:Onbtn_stealth_stopStealth()
 	self:ExecuteScriptByCondition("npcx_beh_substate_stealth",
 								axr_companions.set_companion_to_default_substate, 
 								axr_companions.set_companion_to_stealth_substate,
-								"characters_voice\\player\\" .. lang .. "\\" .. muffle .. "command_stealth_stop_" .. math.random(3),
-								"characters_voice\\player\\" .. lang .. "\\" .. muffle .. "command_stealth_" .. math.random(3))
+								"characters_voice\\player" .. lang .. "\\" .. muffle .. "command_stealth_stop_" .. math.random(3),
+								"characters_voice\\player" .. lang .. "\\" .. muffle .. "command_stealth_" .. math.random(3))
 
 --	addonMenu:CloseTheMenu()
 end 
@@ -116,8 +116,8 @@ function addonCompanionsContextMenu:Onbtn_far_close()
 	self:ExecuteScriptByCondition("npcx_beh_distance_far",
 								axr_companions.switch_companion_distance, 
 								axr_companions.switch_companion_distance,
-								"characters_voice\\player\\" .. lang .. "\\" .. muffle .. "command_follow_close_" .. math.random(3),
-								"characters_voice\\player\\" .. lang .. "\\" .. muffle .. "command_follow_far_" .. math.random(3))
+								"characters_voice\\player" .. lang .. "\\" .. muffle .. "command_follow_close_" .. math.random(3),
+								"characters_voice\\player" .. lang .. "\\" .. muffle .. "command_follow_far_" .. math.random(3))
 
 --	addonMenu:CloseTheMenu()
 end 
@@ -126,8 +126,8 @@ function addonCompanionsContextMenu:Onbtn_aggressive_ignoreCombatButHelpActor()
 	self:ExecuteScriptByCondition("npcx_beh_ignore_combat",
 								axr_companions.set_companion_to_attack_state, 
 								axr_companions.set_companion_to_attack_only_actor_combat_enemy_state,
-								"characters_voice\\player\\" .. lang .. "\\" .. muffle .. "command_fireatwill_" .. math.random(3),
-								"characters_voice\\player\\" .. lang .. "\\" .. muffle .. "command_guard_" .. math.random(3))
+								"characters_voice\\player" .. lang .. "\\" .. muffle .. "command_fireatwill_" .. math.random(3),
+								"characters_voice\\player" .. lang .. "\\" .. muffle .. "command_guard_" .. math.random(3))
 
 --	addonMenu:CloseTheMenu()
 end 
@@ -136,8 +136,8 @@ function addonCompanionsContextMenu:Onbtn_ignoreCombat_ignoreCombatButHelpActor(
 	self:ExecuteScriptByCondition("npcx_beh_ignore_actor_enemies",
 								axr_companions.set_companion_to_attack_only_actor_combat_enemy_state, 
 								axr_companions.set_companion_to_ignore_combat_state,
-								"characters_voice\\player\\" .. lang .. "\\" .. muffle .. "command_guard_" .. math.random(3),
-								"characters_voice\\player\\" .. lang .. "\\" .. muffle .. "command_holdfire_" .. math.random(3))
+								"characters_voice\\player" .. lang .. "\\" .. muffle .. "command_guard_" .. math.random(3),
+								"characters_voice\\player" .. lang .. "\\" .. muffle .. "command_holdfire_" .. math.random(3))
 
 --	addonMenu:CloseTheMenu()
 end 
@@ -146,8 +146,8 @@ function addonCompanionsContextMenu:Onbtn_lootCorpses_ignoreCorpses()
 	self:ExecuteScriptByCondition("npcx_beh_loot_corpses",
 								axr_companions.switch_companion_loot_corpses, 
 								axr_companions.switch_companion_loot_corpses,
-								"characters_voice\\player\\" .. lang .. "\\" .. muffle .. "command_loot_stop_1",
-								"characters_voice\\player\\" .. lang .. "\\" .. muffle .. "command_loot_" .. math.random(3))
+								"characters_voice\\player" .. lang .. "\\" .. muffle .. "command_loot_stop_ .. math.random(3)",
+								"characters_voice\\player" .. lang .. "\\" .. muffle .. "command_loot_" .. math.random(3))
 
 --	addonMenu:CloseTheMenu()
 end 

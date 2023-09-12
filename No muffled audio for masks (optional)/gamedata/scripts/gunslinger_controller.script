@@ -18,9 +18,7 @@ end
 
 local wct = weapon_cover_tilt
 local dte = demonized_time_events
-
-local helmet = (db.actor:item_in_slot(12))
-	local actor_sounds = {
+local actor_sounds = {
 	"gunslinger_controller\\actor\\sanity_1",
 	"gunslinger_controller\\actor\\sanity_2",
 	"gunslinger_controller\\actor\\sanity_3",
