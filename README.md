@@ -1,6 +1,6 @@
 # Ladies-and-Sister-Stalkers-LASS
 <p align="center">
-  <img src="(https://github.com/Paint-Thinner/Ladies-and-Sister-Stalkers-LASS/assets/134613305/585617d5-29ef-4f9c-a64b-93f3033f83c0)">
+  <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/134613305/281737040-585617d5-29ef-4f9c-a64b-93f3033f83c0.png">
 </p>
 
 Model and Voice overhaul for all the player character models and first person leg models for female bodies.
