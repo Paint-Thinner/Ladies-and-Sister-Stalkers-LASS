@@ -97,7 +97,7 @@ function is_actor_in_combat() --combat checker, returns true if actor is being a
 	end
 	for id,v in pairs(xr_combat_ignore.fighting_with_actor_npcs) do --gets internal info
 		local npc = db.storage[id] and db.storage[id].object --gets internal info
-		if npc and npc:alive() and check_for_weapon(npc) == true and npc:position():distance_to(db.actor:position())<=1000 then --checks if there's an attacking npc, if it is alive, has a weapon (or is a mutant) and if it is close enough
+		if npc and npc:alive() and check_for_weapon(npc) == true and npc:position():distance_to(db.actor:position())<=100 then --checks if there's an attacking npc, if it is alive, has a weapon (or is a mutant) and if it is close enough
 			--actor_in_combat = "yes, actively targeted" --actor is being targeted right now
 			combat_inertia = time_global() + 10000 --sets the delay of ten seconds to ensure that combat status doesn't drop in case enemies stop targeting the actor for a short time
 			return true --returns true if all conditions are met
@@ -197,7 +197,7 @@ function monster_on_death_callback(victim,killer) --adds combat_intensity when a
 	elseif is_actor_in_combat() == true and combat_intensity > combat_medium_threshold then --second state, play the sound (cocky, dominant)
 		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "kill_confirm_l2_" .. math.random(12),2.0,2000,25,false,false,false,false)
 	elseif is_actor_in_combat() == true then --first state (calm and informative, should also require the a squad)
-		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "kill_confirm_l1_" .. math.random(7),2.0,1500,25,false,false,false,false)
+		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "kill_confirm_l1_" .. math.random(7),2.0,1500,12.5,true,false,false,false)
 	end
 	
 	add_action_intensity(80,1.0,1000)
@@ -218,9 +218,9 @@ function npc_on_death_callback(victim,killer) --adds combat_intensity when a hum
 	if is_actor_in_combat() == true and combat_intensity > combat_high_threshold then
 		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "kill_confirm_l3_" .. math.random(4),2.0,3500,75,false,false,false,false)
 	elseif is_actor_in_combat() == true and combat_intensity > combat_medium_threshold then
-		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "kill_confirm_l2_" .. math.random(12),2.0,3000,75,false,false,false,false)
+		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "kill_confirm_l2_" .. math.random(12),2.0,3000,50,false,false,false,false)
 	elseif is_actor_in_combat() == true then
-		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "kill_confirm_l1_" .. math.random(7),2.0,1500,50,false,false,false,false)
+		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "kill_confirm_l1_" .. math.random(7),2.0,1500,25,true,false,false,false)
 	end
 	
 	add_action_intensity(100,1.0,1000)
@@ -250,6 +250,7 @@ function npc_on_hit_callback(npc,damage_amount,local_direction,attacker,bone_ind
 end
 
 local combat_check_time = 0 --is set later
+
 
 trigger = 0
 delay = 500
@@ -290,7 +291,7 @@ function actor_on_update(binder,delta) --thinker function, handles conditional s
 		local hurt_volume = ( 1 - db.actor.health - (db.actor.health * 0.5) ) --sets the volume of the next hurt sound, gets louder the less health the actor has
 		local hurt_pause = 40000 * db.actor.health --sets the pause before the next hurt sound, it gets shorter the less health the actor has
 		local sprint_volume = ( 1 - db.actor.power - (db.actor.power * 0.5) ) --sets the volume of the next exhaustion sound, gets louder the less stamina the actor has
-		local sprint_pause = 8500 * db.actor.power --sets the pause before the next exhaustion sound, it gets shorter the less stamina the actor has
+		local sprint_pause = 12000 * db.actor.power --sets the pause before the next exhaustion sound, it gets shorter the less stamina the actor has
 		local psy_volume = ( 1 - arszi_psy.get_psy_health() - (arszi_psy.get_psy_health() * 0.5) ) --sets the volume of the next psy sound, gets louder the less psy-health the actor has
 		local sanity_pause = ( 7000 * arszi_psy.get_psy_health() ) --sets the pause before the next psy sound, it gets shorter the less psy-health the actor has	
 		local fear_pause = ( 20000 * arszi_psy.get_psy_health() ) --sets the pause before the next psy sound, it gets shorter the less psy-health the actor has	
@@ -301,7 +302,7 @@ function actor_on_update(binder,delta) --thinker function, handles conditional s
 		local sleep_volume = (actor_status_sleep.get_sleep_deprivation(true)*0.2 )
 		local sleep_pause = 120000 / (actor_status_sleep.get_sleep_deprivation(true)*0.5 )
 		hurt_pause = clamp(hurt_pause,40000,45000) -- limits the hurt_pause value so the pause between sounds isn't too short or too long
-		sprint_pause = clamp(sprint_pause,8500,10000) -- limits the sprint_pause value so the pause between sounds isn't too short or too long
+		sprint_pause = clamp(sprint_pause,12000,12500) -- limits the sprint_pause value so the pause between sounds isn't too short or too long
 		sanity_pause = clamp(sanity_pause,7000,8000) 
 		fear_pause = clamp(fear_pause,20000,25000) -- limits the psy_pause value so the pause between sounds isn't too short or too long
 		thirst_pause = clamp(thirst_pause,65000,95000) -- new thirst clamp 
@@ -320,8 +321,8 @@ function actor_on_update(binder,delta) --thinker function, handles conditional s
 		elseif arszi_psy.get_psy_health() < 1.0 and psy_volume > 0 then --new psy-hurt sound (weak psy)
 			actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "fear_" .. math.random(7),psy_volume,fear_pause,100,false,false,false,true) --plays the psy wounded sound
 		
-		elseif db.actor.power < 0.20 and sprint_volume > 0 and hurt_volume < sprint_volume and hurt_pause > sprint_pause then --exhaustion state will only play if it has both longer pause and higher volume than the hurt sound
-			actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "exhausted_" .. math.random(7),sprint_volume,sprint_pause,100,false,false,false,true) --plays the exhausted sound
+		elseif db.actor.power < 0.10 and sprint_volume > 0 and hurt_volume < sprint_volume and hurt_pause > sprint_pause then --exhaustion state will only play if it has both longer pause and higher volume than the hurt sound
+			actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "exhausted_" .. math.random(62),sprint_volume,sprint_pause,100,false,false,false,true) --plays the exhausted sound
 		
 		elseif db.actor.health < 0.55 and hurt_volume > 0 then --normal hurt state will play if everything else fails to meet the conditions
 			actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "hurt_" .. math.random(17),1.8,hurt_pause,100,false,false,false,true) --plays the wounded sound
@@ -400,7 +401,7 @@ function actor_on_weapon_jammed(wpn) --plays responses to weapon jams
 		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "gun_jam_" .. math.random(12),2,2000,100,true,false,false,false)
 		add_action_intensity(30,0.5,125)
 	else
-		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "gun_jam_" .. math.random(12),2,2000,90,false,false,false,false)
+		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "gun_jam_" .. math.random(12),2,2000,50,false,false,false,false)
 		add_action_intensity(35,0.5,150)
 	end
 	
@@ -410,12 +411,10 @@ function actor_on_weapon_reload(wpn,ammo_total) --calls out reloads
 
 	already_commented_this_jam = false --clear the marker, actor is fixing the jam
 
-	if is_actor_in_combat() == true and combat_intensity > combat_medium_threshold then
-		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "reloading_l2_" .. math.random(3),2.0,3000,80,false,false,false,false)
-		add_action_intensity(35,0.5,150)
-	elseif is_actor_in_combat() == true then
-		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "reloading_l1_" .. math.random(4),2.0,1500,90,true,false,false,false)
-		add_action_intensity(30,0.5,100)
+	if is_actor_in_combat() == true and combat_intensity > combat_high_threshold then
+		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "reloading_l1_" .. math.random(4),2.0,3500,75,true,false,false,false)
+	elseif is_actor_in_combat() == true and combat_intensity > combat_medium_threshold then
+		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "reloading_l2_" .. math.random(4),2.0,3000,35,false,false,false,false)
 	end
 	
 end

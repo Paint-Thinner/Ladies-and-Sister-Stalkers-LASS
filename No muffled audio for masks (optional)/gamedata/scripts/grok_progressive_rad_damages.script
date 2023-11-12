@@ -36,6 +36,12 @@ function actor_on_update()
                 local life_remove = actor_health - (base_damage_value + base_damage_value * actor_rad/2)
                 db.actor:set_health_ex(life_remove)
             end
+			local helmet = (db.actor:item_in_slot(12))
+			if helmet then
+				muffle = ""
+			else
+				muffle = ""
+			end
             if actor_rad > 0.1 then
                 probability = math.ceil(22 / actor_rad)
                 chance = math.random(1,probability)
@@ -43,7 +49,7 @@ function actor_on_update()
                     local actor_health = db.actor.health
                     db.actor:set_health_ex(actor_health - math.random(35,80)/1000)
 					grok_rads = 1
-                    sound = sound_object("grok\\cough" .. math.random(1,7) .. "")
+                    sound = sound_object("grok\\cough" .. math.random(1,7) .. "" .. muffle)
                     sound:play(db.actor, 0, sound_object.s2d) 
                     sound.volume = 1.6
                     level.add_pp_effector("blur2.ppe", math.random(645808, 645820), false)

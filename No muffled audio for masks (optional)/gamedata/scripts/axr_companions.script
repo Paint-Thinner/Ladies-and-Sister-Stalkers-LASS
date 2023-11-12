@@ -1787,43 +1787,48 @@ function UIWheelCompanion:PlayVoiceOver(cmd, state)
 			lang = ""
 	end
 	local helmet = (db.actor:item_in_slot(12))
+    if helmet then
+        muffle = ""
+    else
+        muffle = ""
+    end
 	if (cmd == "movement") then
 		if (state == 2) then
-			self:PlaySoundFile("characters_voice\\player" .. lang .. "\\" .. "command_holdposition_" .. math.random(4), 1.0)
+			self:PlaySoundFile("characters_voice\\player" .. lang .. "\\" .. muffle .. "command_holdposition_" .. math.random(4), 1.0)
 		else
-			self:PlaySoundFile("characters_voice\\player" .. lang .. "\\" .. "command_follow_" .. math.random(3), 1.0)
+			self:PlaySoundFile("characters_voice\\player" .. lang .. "\\" .. muffle .. "command_follow_" .. math.random(3), 1.0)
 		end
 	end
 
 	if (cmd == "combat") then
 		if (state == 1) then
-			self:PlaySoundFile("characters_voice\\player" .. lang .. "\\" .. "command_holdfire_" .. math.random(3), 1.0)
+			self:PlaySoundFile("characters_voice\\player" .. lang .. "\\" .. muffle .. "command_holdfire_" .. math.random(3), 1.0)
 		else
-			self:PlaySoundFile("characters_voice\\player" .. lang .. "\\" .. "command_fireatwill_" .. math.random(3), 1.0)
+			self:PlaySoundFile("characters_voice\\player" .. lang .. "\\" .. muffle .. "command_fireatwill_" .. math.random(3), 1.0)
 		end
 	end
 
 	if (cmd == "loot") then
 		if (state == 1) then
-			self:PlaySoundFile("characters_voice\\player" .. lang .. "\\" .. "command_loot_stop_1", 1.0)
+			self:PlaySoundFile("characters_voice\\player" .. lang .. "\\" .. muffle .. "command_loot_stop_1", 1.0)
 		else
-			self:PlaySoundFile("characters_voice\\player" .. lang .. "\\" .. "command_loot_" .. math.random(3), 1.0)
+			self:PlaySoundFile("characters_voice\\player" .. lang .. "\\" .. muffle .. "command_loot_" .. math.random(3), 1.0)
 		end
 	end
 
 	if (cmd == "distance") then
 		if (state == 1) then
-			self:PlaySoundFile("characters_voice\\player" .. lang .. "\\" .. "command_follow_far_" .. math.random(3), 1.0)
+			self:PlaySoundFile("characters_voice\\player" .. lang .. "\\" .. muffle .. "command_follow_far_" .. math.random(3), 1.0)
 		else
-			self:PlaySoundFile("characters_voice\\player" .. lang .. "\\" .. "command_follow_close_" .. math.random(3), 1.0)
+			self:PlaySoundFile("characters_voice\\player" .. lang .. "\\" .. muffle .. "command_follow_close_" .. math.random(3), 1.0)
 		end
 	end
 
 	if (cmd == "stealth") then
 		if (state == 1) then
-			self:PlaySoundFile("characters_voice\\player" .. lang .. "\\" .. "command_stealth_stop_" .. math.random(3), 1.0)
+			self:PlaySoundFile("characters_voice\\player" .. lang .. "\\" .. muffle .. "command_stealth_stop_" .. math.random(3), 1.0)
 		else
-			self:PlaySoundFile("characters_voice\\player" .. lang .. "\\" .. "command_stealth_" .. math.random(3), 1.0)
+			self:PlaySoundFile("characters_voice\\player" .. lang .. "\\" .. muffle .. "command_stealth_" .. math.random(3), 1.0)
 		end
 	end
 end

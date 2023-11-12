@@ -37,10 +37,10 @@ function actor_on_update()
                 db.actor:set_health_ex(life_remove)
             end
 			local helmet = (db.actor:item_in_slot(12))
-				if helmet then
-					muffle = "_m"
-				else
-					muffle = ""
+			if helmet then
+				muffle = "_m"
+			else
+				muffle = ""
 			end
             if actor_rad > 0.1 then
                 probability = math.ceil(22 / actor_rad)
