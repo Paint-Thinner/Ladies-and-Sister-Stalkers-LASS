@@ -322,7 +322,7 @@ function actor_on_update(binder,delta) --thinker function, handles conditional s
 			actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "fear_" .. math.random(7),psy_volume,fear_pause,100,false,false,false,true) --plays the psy wounded sound
 		
 		elseif db.actor.power < 0.10 and sprint_volume > 0 and hurt_volume < sprint_volume and hurt_pause > sprint_pause then --exhaustion state will only play if it has both longer pause and higher volume than the hurt sound
-			actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "exhausted_" .. math.random(62),sprint_volume,sprint_pause,100,false,false,false,true) --plays the exhausted sound
+			actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "exhausted_" .. math.random(7),sprint_volume,sprint_pause,100,false,false,false,true) --plays the exhausted sound
 		
 		elseif db.actor.health < 0.55 and hurt_volume > 0 then --normal hurt state will play if everything else fails to meet the conditions
 			actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "hurt_" .. math.random(17),1.8,hurt_pause,100,false,false,false,true) --plays the wounded sound
@@ -411,10 +411,12 @@ function actor_on_weapon_reload(wpn,ammo_total) --calls out reloads
 
 	already_commented_this_jam = false --clear the marker, actor is fixing the jam
 
-	if is_actor_in_combat() == true and combat_intensity > combat_high_threshold then
-		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "reloading_l1_" .. math.random(4),2.0,3500,75,true,false,false,false)
-	elseif is_actor_in_combat() == true and combat_intensity > combat_medium_threshold then
-		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "reloading_l2_" .. math.random(4),2.0,3000,35,false,false,false,false)
+	if is_actor_in_combat() == true and combat_intensity > combat_high_threshold then 		--we're in the maxed out state of combat, play the according sound (something almost insane ideally)
+		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "kill_confirm_l3_" .. math.random(6),2.0,3500,50,false,false,false,false)
+	elseif is_actor_in_combat() == true and combat_intensity > combat_medium_threshold then --second state, play the sound (cocky, dominant)
+		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "kill_confirm_l2_" .. math.random(5),2.0,2000,25,false,false,false,false)
+	elseif is_actor_in_combat() == true then 												--first state (calm and informative, should also require the a squad)
+		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "kill_confirm_l1_" .. math.random(4),2.0,1500,12.5,true,false,false,false)
 	end
 	
 end
