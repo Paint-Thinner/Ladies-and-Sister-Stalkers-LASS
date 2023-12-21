@@ -9,8 +9,8 @@ LASS is a project I've been working on and off for about a total of a months wor
 
 The mods primary effort can be seen with completely redone 3d models for the player character, and completely custom voice acting for both languages. Credited below.
 
-This mod works best with Warnymph https://www.moddb.com/mods/stalker-anomaly/addons/war-nymph
-You can always find the latest release from the the github releases https://github.com/Paint-Thinner/Ladies-and-Sister-Stalkers-LASS/releases and install it by dragging it into MO2 at the bottom of the load order. Unlike otherwise, if you use WarNymph with the patch you need to have THAPS enabled.
+This mod works best with [Warnymph](https://www.moddb.com/mods/stalker-anomaly/addons/war-nymph)
+You can always find the latest release from the the [github releases](https://github.com/Paint-Thinner/Ladies-and-Sister-Stalkers-LASS/releases) and install it by dragging it into MO2 at the bottom of the load order. Unlike otherwise, if you use WarNymph with the patch you need to have THAPS enabled.
 If you find any bugs, with models etc...yell at me on the GAMMA discord or make a github ticket.
 --- --- ---
 CREDITS For the great voice acting provided by [Tetiana Voloshyna](https://voice123.com/voice-actor/tetjanavoloshina1996/samples/tetiana-voloshyna-russian-accent-in-english/13874867) and [Julia Walker](https://www.voplanet.com/julia-walker) for the player dialogue.
