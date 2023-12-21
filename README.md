@@ -14,4 +14,4 @@ You can always find the latest release from the the github releases https://gith
 If you find any bugs, with models etc...yell at me on the GAMMA discord or make a github ticket.
 --- --- ---
 CREDITS For the great voice acting provided by [Tetiana Voloshyna](https://voice123.com/voice-actor/tetjanavoloshina1996/samples/tetiana-voloshyna-russian-accent-in-english/13874867) and [Julia Walker](https://www.voplanet.com/julia-walker) for the player dialogue.
-To Cressida's ACTUAL Female Player Character mod https://github.com/CressidaIlliana/jubilant-octo-garbanzo which served the basis for this project. DuxFortis who's models served the foundation of the mesh edits for this mod. and Obsidian because I totally yoinked a bunch of assets from Kotor 2
+To [Cressida's ACTUAL Female Player Character mod](https://github.com/CressidaIlliana/jubilant-octo-garbanzo) which served the basis for this project. DuxFortis who's models served the foundation of the mesh edits for this mod. and Obsidian because I totally yoinked a few assets from Kotor 2
