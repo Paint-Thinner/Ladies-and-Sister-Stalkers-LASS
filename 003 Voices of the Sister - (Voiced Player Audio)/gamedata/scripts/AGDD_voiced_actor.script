@@ -412,11 +412,11 @@ function actor_on_weapon_reload(wpn,ammo_total) --calls out reloads
 	already_commented_this_jam = false --clear the marker, actor is fixing the jam
 
 	if is_actor_in_combat() == true and combat_intensity > combat_high_threshold then 		--we're in the maxed out state of combat, play the according sound (something almost insane ideally)
-		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "reloading_l3_" .. math.random(6),2.0,3500,50,false,false,false,false)
+		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "kill_confirm_l3_" .. math.random(6),2.0,3500,50,false,false,false,false)
 	elseif is_actor_in_combat() == true and combat_intensity > combat_medium_threshold then --second state, play the sound (cocky, dominant)
-		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "reloading_l2_" .. math.random(5),2.0,2000,25,false,false,false,false)
+		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "kill_confirm_l2_" .. math.random(5),2.0,2000,25,false,false,false,false)
 	elseif is_actor_in_combat() == true then 												--first state (calm and informative, should also require the a squad)
-		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "reloading_l1_" .. math.random(4),2.0,1500,12.5,true,false,false,false)
+		actor_speak("characters_voice\\player" .. lang .. "\\" .. muffle .. "kill_confirm_l1_" .. math.random(4),2.0,1500,12.5,true,false,false,false)
 	end
 	
 end
