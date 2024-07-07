@@ -19,14 +19,7 @@ end
 local wct = weapon_cover_tilt
 local dte = demonized_time_events
 
-local actor_sounds = {
-	"gunslinger_controller\\actor\\sanity_1",
-	"gunslinger_controller\\actor\\sanity_2",
-	"gunslinger_controller\\actor\\sanity_3",
-	"gunslinger_controller\\actor\\sanity_4",
-	"gunslinger_controller\\actor\\sanity_5",
-	}
-end
+local actor_sounds = {}
 
 local actor_sound
 local psy_sounds = {
@@ -534,6 +527,25 @@ function check_controllers()
 	else
 		unset_under_controller()
 	end
+	
+    local helmet = (db.actor:item_in_slot(12))
+    if helmet then
+	    actor_sounds = {
+	    "gunslinger_controller\\actor\\sanity_1",
+	    "gunslinger_controller\\actor\\sanity_2",
+	    "gunslinger_controller\\actor\\sanity_3",
+	    "gunslinger_controller\\actor\\sanity_4",
+	    "gunslinger_controller\\actor\\sanity_5",
+	    }
+	else
+	    actor_sounds = {
+	    "gunslinger_controller\\actor\\sanity_1",
+	    "gunslinger_controller\\actor\\sanity_2",
+	    "gunslinger_controller\\actor\\sanity_3",
+	    "gunslinger_controller\\actor\\sanity_4",
+	    "gunslinger_controller\\actor\\sanity_5",
+	    }
+    end
 end
 
 function actor_on_update()
